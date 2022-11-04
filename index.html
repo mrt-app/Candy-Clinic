@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="HandheldFriendly" content="True" />
+	<title>Candy Clinic</title>
+	<link rel="icon" href="favicon.ico" type="image/png">
+	<link rel="canonical" href="https://mrt-app.github.io/candy-clinic/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&family=Zen+Kurenaido&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script type="text/javascript" src="./js/main.js"></script>
+</head>
+<body>
+	<header>
+		<nav><a href="https://mrt-app.github.io/" class="btn btn-malformation">&lt; Back</a></nav>
+	</header>
+
+    <div class="fox">
+        <img id="fox" src="./images/candy_clinic.webp"/>
+    </div>
+
+
+    <div id="dialog-container">
+        <div id="q1" class="dialog-frame hide">
+            <p>今日はどうしたの？</p>
+            <div class="grid-container">
+                <div class="answer" onclick="anser(1,1)">つらい</div>
+                <div class="answer" onclick="anser(1,2)">かなしい</div>
+                <div class="answer" onclick="anser(1,3)">さみしい</div>
+                <div class="answer" onclick="anser(1,4)">イライラする</div>
+              </div>
+        </div>
+
+        <div id="q2" class="dialog-frame hide">
+            <p>いつからそうなの？</p>
+            <div class="grid-container hide">
+                <div class="answer" onclick="anser(2,4)">だいぶ前から</div>
+                <div class="answer" onclick="anser(2,3)">ちょっと前から</div>
+                <div class="answer" onclick="anser(2,2)">今さっき</div>
+                <div class="answer" onclick="anser(2,1)">たぶんこれから</div>
+              </div>
+        </div>    
+
+        <div id="q3" class="dialog-frame hide">
+            <p>どのくらい？</p>
+            <div class="grid-container hide">
+                <div class="answer" onclick="anser(3,0)">ちょっとだけ</div>
+                <div class="answer" onclick="anser(3,1)">とっても</div>
+              </div>
+        </div>    
+
+        <div id="answer" class="prescription-frame hide">
+            <p>好きなお菓子をお出ししますね！</p>
+
+            <div class="prescription">
+                <p class="header">お菓子の処方せん</p>
+                <p class="header"><small>(食べたいお菓子を書いただけの紙です。)</small></p>
+
+                <table>
+                    <tbody>
+                        <tr>
+                            <td colspan="2"><small>交付年月日</small></td>
+                            <td><small id="created_at">令和　年　月　日</small></td>
+                            <td><small>処方箋の使用期限</small></td>
+                            <td><small id="expired_at">令和　年　月　日</small></td>
+                        </tr>
+                        <tr>
+                            <td><br/><br/>処<br/><br/><br/>方<br/><br/><br/></td>
+                            <td colspan="4">
+                                <ul id="results">
+                                    <li>ポッキー 5箱</li>
+                                    <li>プリッツ 1箱</li>
+                                    <li>たべっ子どうぶつ 12個入</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>備<br/>考</td>
+                            <td colspan="4">医師名：きつね</td>
+                        </tr>
+                        <tr>
+                            <td colspan="5">
+                                <small>
+                                    備考：１．これは疾病の診断、治療、予防を目的としたものではありません。<br/>
+                                    　　　２．処方欄に表示されるお菓子のアレルギー表示にもご注意ください。<br/>
+                                    　　　３．重ねてですがこれは食べたいお菓子を書いたものです。
+                                </small>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>    
+    </div>
+
+</body>
+
+</html>

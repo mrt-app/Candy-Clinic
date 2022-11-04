@@ -99,6 +99,7 @@ function generatePrescription() {
     for(var i=0; i<resultList.length; ++i) {
         if (i > 2) { break; }
         const link = document.createElement("a");
+        link.target = "_blank" ;
         link.href = resultList[i].url;
         link.innerText = resultList[i].name;
         const list = document.createElement("li");
